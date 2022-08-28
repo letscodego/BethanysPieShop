@@ -16,7 +16,7 @@ namespace BethanysPieShop.Models
             get { return _bethanysPieShopDbContext.Pies.Include(c=>c.Category); }
         }
 
-        public IEnumerable<Pie> PieOfTheWeek
+        public IEnumerable<Pie> PiesOfTheWeek
         {
             get { return _bethanysPieShopDbContext.Pies.Include(c => c.Category).Where(p=> p.IsPieOfTheWeek); }
         }
