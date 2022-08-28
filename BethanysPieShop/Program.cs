@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
-builder.Services.AddRazorPages();
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IPieRepository, PieRepository>();
@@ -32,6 +31,5 @@ app.MapDefaultControllerRoute(); //{controller=Home}/{action=Index}/{id?}
 //    name: "default",
 //    pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.MapRazorPages();
 DbInitializer.Seed(app);
 app.Run();

@@ -15,7 +15,7 @@ namespace BethanysPieShop.Controllers
 
         public IActionResult Index()
         {
-            var piesOfTheWeek = _pieRepository.PiesOfTheWeek;
+            var piesOfTheWeek = _pieRepository.PieOfTheWeek;
             var homeViewModel = new HomeViewModel(piesOfTheWeek);
             return View(homeViewModel);
         }
