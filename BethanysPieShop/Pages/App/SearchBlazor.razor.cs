@@ -5,7 +5,7 @@ namespace BethanysPieShop.Pages.App
 {
     public partial class SearchBlazor
     {
-        public string SearchText = "";
+        private string SearchText = "";
         public List<Pie> FilteredPies { get; set; } = new List<Pie>();
 
         [Inject]
@@ -20,5 +20,4 @@ namespace BethanysPieShop.Pages.App
             }
         }
     }
-
 }
